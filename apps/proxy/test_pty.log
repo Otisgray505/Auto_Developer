@@ -1,6 +1,0 @@
-▶ PTY Execution Engine (Worker)
-  ✔ should initialize a headless PTY worker successfully (86.7957ms)
-  ✖ should determine idle state from STDOUT correctly without text scraping (881.6573ms)
-  ✔ should propagate SIGTERM and stop gracefully (94.9562ms)
-✖ PTY Execution Engine (Worker) (1064.0729ms)
-Terminate batch job (Y/N)? 
