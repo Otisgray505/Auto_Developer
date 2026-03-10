@@ -1,0 +1,38 @@
+{"event":"jitter_delay","level":"info","message":"Applying randomized jitter delay of 752ms","timestamp":"2026-03-09T03:29:19.695Z"}
+{"event":"intercept_success","level":"info","message":"Outbound LLM Call","model":"gpt-4","route":"/chat/completions","timestamp":"2026-03-09T03:29:20.461Z"}
+(node:63748) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+{"event":"proxy_forward","host":"127.0.0.1","level":"info","message":"Forwarding request","path":"/chat/completions","timestamp":"2026-03-09T03:29:20.467Z"}
+{"event":"proxy_response","level":"info","message":"Received response from upstream","statusCode":200,"timestamp":"2026-03-09T03:29:20.470Z"}
+▶ Local API Reverse Proxy
+  ✔ should intercept API payload and route gpt-* to OpenAI (818.2073ms)
+{"event":"jitter_delay","level":"info","message":"Applying randomized jitter delay of 943ms","timestamp":"2026-03-09T03:29:20.486Z"}
+{"event":"intercept_success","level":"info","message":"Outbound LLM Call","model":"claude-3-opus-20240229","route":"/chat/completions","timestamp":"2026-03-09T03:29:21.437Z"}
+{"event":"proxy_forward","host":"127.0.0.1","level":"info","message":"Forwarding request","path":"/chat/completions","timestamp":"2026-03-09T03:29:21.439Z"}
+{"event":"proxy_response","level":"info","message":"Received response from upstream","statusCode":200,"timestamp":"2026-03-09T03:29:21.442Z"}
+  ✔ should intercept API payload and route claude-* to Anthropic (964.3326ms)
+{"event":"jitter_delay","level":"info","message":"Applying randomized jitter delay of 2065ms","timestamp":"2026-03-09T03:29:21.451Z"}
+{"event":"intercept_success","level":"info","message":"Outbound LLM Call","model":"gpt-4","route":"/chat/completions","timestamp":"2026-03-09T03:29:23.527Z"}
+{"event":"proxy_forward","host":"127.0.0.1","level":"info","message":"Forwarding request","path":"/chat/completions","timestamp":"2026-03-09T03:29:23.529Z"}
+{"event":"proxy_response","level":"info","message":"Received response from upstream","statusCode":200,"timestamp":"2026-03-09T03:29:23.531Z"}
+  ✔ should introduce a randomized jitter delay between 500ms and 2500ms on valid proxy requests (2088.2548ms)
+{"event":"rate_limit_exceeded","ip":"127.0.0.1","level":"warn","message":"Circuit Breaker Triggered: Rate limit exceeded","timestamp":"2026-03-09T03:29:23.547Z"}
+{"event":"rate_limit_exceeded","ip":"127.0.0.1","level":"warn","message":"Circuit Breaker Triggered: Rate limit exceeded","timestamp":"2026-03-09T03:29:23.550Z"}
+{"event":"rate_limit_exceeded","ip":"127.0.0.1","level":"warn","message":"Circuit Breaker Triggered: Rate limit exceeded","timestamp":"2026-03-09T03:29:23.550Z"}
+{"event":"rate_limit_exceeded","ip":"127.0.0.1","level":"warn","message":"Circuit Breaker Triggered: Rate limit exceeded","timestamp":"2026-03-09T03:29:23.551Z"}
+{"event":"rate_limit_exceeded","ip":"127.0.0.1","level":"warn","message":"Circuit Breaker Triggered: Rate limit exceeded","timestamp":"2026-03-09T03:29:23.552Z"}
+{"event":"rate_limit_exceeded","ip":"127.0.0.1","level":"warn","message":"Circuit Breaker Triggered: Rate limit exceeded","timestamp":"2026-03-09T03:29:23.552Z"}
+  ✔ should enforce circuit breaker rate limits and return 429 Too Many Requests (22.199ms)
+  ✔ should reject non-allowed CLI commands (7.659ms)
+{"event":"jitter_delay","level":"info","message":"Applying randomized jitter delay of 2090ms","timestamp":"2026-03-09T03:29:23.567Z"}
+{"event":"governance_block","ip":"127.0.0.1","level":"warn","message":"Governance: Blocked destructive command","timestamp":"2026-03-09T03:29:25.660Z"}
+  ✔ should reject the proxy request with 403 if it contains blocked destructive commands (2097.5483ms)
+{"event":"jitter_delay","level":"info","message":"Applying randomized jitter delay of 1396ms","timestamp":"2026-03-09T03:29:25.666Z"}
+{"event":"governance_prune","length":300186,"level":"info","message":"Governance: Pruning excessive context window","timestamp":"2026-03-09T03:29:27.077Z"}
+{"event":"intercept_success","level":"info","message":"Outbound LLM Call","model":"gpt-4","route":"/chat/completions","timestamp":"2026-03-09T03:29:27.077Z"}
+{"event":"proxy_forward","host":"127.0.0.1","level":"info","message":"Forwarding request","path":"/chat/completions","timestamp":"2026-03-09T03:29:27.079Z"}
+{"event":"proxy_response","level":"info","message":"Received response from upstream","statusCode":200,"timestamp":"2026-03-09T03:29:27.081Z"}
+  ✔ should truncate the messages array if the payload is too large to fit in budget (1421.5627ms)
+  ✔ should execute allowed CLI commands and stream output (8411.961ms)
+✔ Local API Reverse Proxy (15849.8971ms)
+Terminate batch job (Y/N)? 

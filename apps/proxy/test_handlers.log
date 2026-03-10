@@ -1,0 +1,64 @@
+{"event":"acp_write_file_approved","level":"info","message":"Governance: Approved WriteTextFile","path":"test-safe-file.txt","timestamp":"2026-03-09T06:01:36.484Z"}
+{"error":"[\n  {\n    \"code\": \"custom\",\n    \"path\": [\n      \"path\"\n    ],\n    \"message\": \"Path escapes designated working directory\"\n  }\n]","event":"acp_write_file_blocked","level":"warn","message":"Governance: Blocked WriteTextFile due to validation","timestamp":"2026-03-09T06:01:36.488Z"}
+{"command":"echo \"hello\"","event":"acp_create_terminal_approved","level":"info","message":"Governance: Approved CreateTerminal","timestamp":"2026-03-09T06:01:36.491Z"}
+{"error":"[\n  {\n    \"code\": \"custom\",\n    \"path\": [\n      \"cwd\"\n    ],\n    \"message\": \"CWD escapes designated working directory\"\n  }\n]","event":"acp_create_terminal_blocked","level":"warn","message":"Governance: Blocked CreateTerminal due to validation","timestamp":"2026-03-09T06:01:36.491Z"}
+{"event":"acp_permission","level":"warn","message":"Governance: Permission requested","timestamp":"2026-03-09T06:01:36.492Z","title":"Dangerous API"}
+Γû╢ ACP Governance Handlers
+  Γ£ö should allow writeTextFile within the current working directory (4.0804ms)
+  Γ£û should block writeTextFile outside the current working directory (3.0938ms)
+  Γ£ö should allow createTerminal without options (0.3953ms)
+  Γ£û should block createTerminal with unsafe cwd (0.4179ms)
+  Γ£ö should transition to blocked state when requestPermission is handled (0.2641ms)
+Γ£û ACP Governance Handlers (9.1745ms)
+Γä╣ tests 5
+Γä╣ suites 1
+Γä╣ pass 3
+Γä╣ fail 2
+Γä╣ cancelled 0
+Γä╣ skipped 0
+Γä╣ todo 0
+Γä╣ duration_ms 14.6108
+
+Γ£û failing tests:
+
+test at src\acp-handlers.test.ts:2:1690
+Γ£û should block writeTextFile outside the current working directory (3.0938ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /escaped constraints/. Input:
+  
+  'Invalid params'
+  
+      at Object.<anonymous> (C:\Users\Fate_Conqueror\OneDrive\Documents\GitHub\Auto_Developer\apps\proxy\src\acp-handlers.test.ts:38:24)
+      at expectedException (node:assert:578:17)
+      at expectsError (node:assert:703:21)
+      at ok.rejects (node:assert:769:3)
+      at async TestContext.<anonymous> (C:\Users\Fate_Conqueror\OneDrive\Documents\GitHub\Auto_Developer\apps\proxy\src\acp-handlers.test.ts:28:9)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async Suite.processPendingSubtests (node:internal/test_runner/test:788:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'Invalid params',
+    expected: /escaped constraints/,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at src\acp-handlers.test.ts:2:2535
+Γ£û should block createTerminal with unsafe cwd (0.4179ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /escaped constraints/. Input:
+  
+  'Invalid params'
+  
+      at Object.<anonymous> (C:\Users\Fate_Conqueror\OneDrive\Documents\GitHub\Auto_Developer\apps\proxy\src\acp-handlers.test.ts:66:24)
+      at expectedException (node:assert:578:17)
+      at expectsError (node:assert:703:21)
+      at ok.rejects (node:assert:769:3)
+      at async TestContext.<anonymous> (C:\Users\Fate_Conqueror\OneDrive\Documents\GitHub\Auto_Developer\apps\proxy\src\acp-handlers.test.ts:56:9)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async Suite.processPendingSubtests (node:internal/test_runner/test:788:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'Invalid params',
+    expected: /escaped constraints/,
+    operator: 'match',
+    diff: 'simple'
+  }

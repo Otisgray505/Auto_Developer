@@ -1,0 +1,57 @@
+Γû╢ ACP Execution Engine (Worker)
+  [32mΓ£ö should initialize an ACP worker and negotiate capabilities successfully [90m(57.1528ms)[39m[39m
+  [32mΓ£ö should emit ACP JSON-RPC connection events cleanly [90m(45.7085ms)[39m[39m
+{"error":"[\n  {\n    \"code\": \"custom\",\n    \"path\": [\n      \"path\"\n    ],\n    \"message\": \"Path escapes designated working directory\"\n  }\n]","event":"acp_write_file_blocked","level":"warn","message":"Governance: Blocked WriteTextFile due to validation","timestamp":"2026-03-09T05:46:58.304Z"}
+{"event":"acp_write_file_approved","level":"info","message":"Governance: Approved WriteTextFile","path":"safe/local/file.txt","timestamp":"2026-03-09T05:46:58.306Z"}
+{"error":"[\n  {\n    \"code\": \"custom\",\n    \"path\": [\n      \"cwd\"\n    ],\n    \"message\": \"CWD escapes designated working directory\"\n  }\n]","event":"acp_create_terminal_blocked","level":"warn","message":"Governance: Blocked CreateTerminal due to validation","timestamp":"2026-03-09T05:46:58.307Z"}
+{"command":"npm","event":"acp_create_terminal_approved","level":"info","message":"Governance: Approved CreateTerminal","timestamp":"2026-03-09T05:46:58.307Z"}
+  [32mΓ£ö should propagate SIGTERM and stop gracefully [90m(42.716ms)[39m[39m
+[32mΓ£ö ACP Execution Engine (Worker) [90m(146.6666ms)[39m[39m
+Γû╢ ACP Governance Validation (Zod & Winston)
+  [31mΓ£û should block fs/write_text_file if path escapes working directory [90m(2.9225ms)[39m[39m
+  [32mΓ£ö should allow fs/write_text_file if path is within working directory [90m(0.2279ms)[39m[39m
+  [31mΓ£û should block terminal/create if cwd escapes working directory [90m(0.5409ms)[39m[39m
+  [32mΓ£ö should allow terminal/create if valid [90m(0.3235ms)[39m[39m
+[31mΓ£û ACP Governance Validation (Zod & Winston) [90m(4.2961ms)[39m[39m
+[34mΓä╣ tests 7[39m
+[34mΓä╣ suites 2[39m
+[34mΓä╣ pass 5[39m
+[34mΓä╣ fail 2[39m
+[34mΓä╣ cancelled 0[39m
+[34mΓä╣ skipped 0[39m
+[34mΓä╣ todo 0[39m
+[34mΓä╣ duration_ms 1162.0053[39m
+
+[31mΓ£û failing tests:[39m
+
+test at src\worker.test.ts:2:2777
+[31mΓ£û should block fs/write_text_file if path escapes working directory [90m(2.9225ms)[39m[39m
+  AssertionError [ERR_ASSERTION]: Should block directory traversal
+      at TestContext.<anonymous> (C:\Users\Fate_Conqueror\OneDrive\Documents\GitHub\Auto_Developer\apps\proxy\src\worker.test.ts:70:20)
+      at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async Promise.all (index 0)
+      at async Suite.run (node:internal/test_runner/test:1518:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at src\worker.test.ts:2:3710
+[31mΓ£û should block terminal/create if cwd escapes working directory [90m(0.5409ms)[39m[39m
+  AssertionError [ERR_ASSERTION]: Should block directory traversal in cwd
+      at TestContext.<anonymous> (C:\Users\Fate_Conqueror\OneDrive\Documents\GitHub\Auto_Developer\apps\proxy\src\worker.test.ts:97:20)
+      at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async Suite.processPendingSubtests (node:internal/test_runner/test:788:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

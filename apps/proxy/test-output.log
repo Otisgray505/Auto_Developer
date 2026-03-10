@@ -1,0 +1,70 @@
+{"event":"jitter_delay","level":"info","message":"Applying randomized jitter delay of 1093ms","timestamp":"2026-03-09T05:27:48.719Z"}
+{"event":"intercept_success","level":"info","message":"Outbound LLM Call","model":"gpt-4","route":"/chat/completions","timestamp":"2026-03-09T05:27:49.820Z"}
+(node:89648) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+{"event":"proxy_forward","host":"127.0.0.1","level":"info","message":"Forwarding request","path":"/chat/completions","timestamp":"2026-03-09T05:27:49.826Z"}
+{"event":"proxy_response","level":"info","message":"Received response from upstream","statusCode":200,"timestamp":"2026-03-09T05:27:49.830Z"}
+Γû╢ Local API Reverse Proxy
+  Γ£ö should intercept API payload and route gpt-* to OpenAI (1159.9021ms)
+{"event":"jitter_delay","level":"info","message":"Applying randomized jitter delay of 1762ms","timestamp":"2026-03-09T05:27:49.848Z"}
+{"event":"intercept_success","level":"info","message":"Outbound LLM Call","model":"claude-3-opus-20240229","route":"/chat/completions","timestamp":"2026-03-09T05:27:51.626Z"}
+{"event":"proxy_forward","host":"127.0.0.1","level":"info","message":"Forwarding request","path":"/chat/completions","timestamp":"2026-03-09T05:27:51.628Z"}
+{"event":"proxy_response","level":"info","message":"Received response from upstream","statusCode":200,"timestamp":"2026-03-09T05:27:51.629Z"}
+  Γ£ö should intercept API payload and route claude-* to Anthropic (1791.07ms)
+{"event":"jitter_delay","level":"info","message":"Applying randomized jitter delay of 1786ms","timestamp":"2026-03-09T05:27:51.637Z"}
+{"event":"intercept_success","level":"info","message":"Outbound LLM Call","model":"gpt-4","route":"/chat/completions","timestamp":"2026-03-09T05:27:53.425Z"}
+{"event":"proxy_forward","host":"127.0.0.1","level":"info","message":"Forwarding request","path":"/chat/completions","timestamp":"2026-03-09T05:27:53.427Z"}
+{"event":"proxy_response","level":"info","message":"Received response from upstream","statusCode":200,"timestamp":"2026-03-09T05:27:53.429Z"}
+  Γ£ö should introduce a randomized jitter delay between 500ms and 2500ms on valid proxy requests (1799.8313ms)
+{"event":"rate_limit_exceeded","ip":"127.0.0.1","level":"warn","message":"Circuit Breaker Triggered: Rate limit exceeded","timestamp":"2026-03-09T05:27:53.447Z"}
+{"event":"rate_limit_exceeded","ip":"127.0.0.1","level":"warn","message":"Circuit Breaker Triggered: Rate limit exceeded","timestamp":"2026-03-09T05:27:53.456Z"}
+{"event":"rate_limit_exceeded","ip":"127.0.0.1","level":"warn","message":"Circuit Breaker Triggered: Rate limit exceeded","timestamp":"2026-03-09T05:27:53.458Z"}
+{"event":"rate_limit_exceeded","ip":"127.0.0.1","level":"warn","message":"Circuit Breaker Triggered: Rate limit exceeded","timestamp":"2026-03-09T05:27:53.459Z"}
+{"event":"rate_limit_exceeded","ip":"127.0.0.1","level":"warn","message":"Circuit Breaker Triggered: Rate limit exceeded","timestamp":"2026-03-09T05:27:53.459Z"}
+{"event":"rate_limit_exceeded","ip":"127.0.0.1","level":"warn","message":"Circuit Breaker Triggered: Rate limit exceeded","timestamp":"2026-03-09T05:27:53.461Z"}
+  Γ£ö should enforce circuit breaker rate limits and return 429 Too Many Requests (35.0921ms)
+  Γ£ö should reject non-allowed CLI commands (15.9654ms)
+{"event":"jitter_delay","level":"info","message":"Applying randomized jitter delay of 1628ms","timestamp":"2026-03-09T05:27:53.488Z"}
+{"event":"governance_block","ip":"127.0.0.1","level":"warn","message":"Governance: Blocked destructive command","timestamp":"2026-03-09T05:27:55.125Z"}
+  Γ£ö should reject the proxy request with 403 if it contains blocked destructive commands (1642.693ms)
+{"event":"jitter_delay","level":"info","message":"Applying randomized jitter delay of 1062ms","timestamp":"2026-03-09T05:27:55.134Z"}
+{"event":"governance_prune","length":300186,"level":"info","message":"Governance: Pruning excessive context window","timestamp":"2026-03-09T05:27:56.200Z"}
+{"event":"intercept_success","level":"info","message":"Outbound LLM Call","model":"gpt-4","route":"/chat/completions","timestamp":"2026-03-09T05:27:56.200Z"}
+{"event":"proxy_forward","host":"127.0.0.1","level":"info","message":"Forwarding request","path":"/chat/completions","timestamp":"2026-03-09T05:27:56.202Z"}
+{"event":"proxy_response","level":"info","message":"Received response from upstream","statusCode":200,"timestamp":"2026-03-09T05:27:56.203Z"}
+  Γ£ö should truncate the messages array if the payload is too large to fit in budget (1077.4844ms)
+(node:89648) [DEP0190] DeprecationWarning: Passing args to a child process with shell option true can lead to security vulnerabilities, as the arguments are not escaped, only concatenated.
+  Γ£û should execute allowed CLI commands and stream output (1144.6692ms)
+Γ£û Local API Reverse Proxy (8686.6427ms)
+(node:91100) [DEP0190] DeprecationWarning: Passing args to a child process with shell option true can lead to security vulnerabilities, as the arguments are not escaped, only concatenated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Γû╢ ACP Execution Engine (Worker)
+  Γ£ö should initialize an ACP worker and negotiate capabilities successfully (60.1727ms)
+  Γ£ö should emit ACP JSON-RPC connection events cleanly (54.8895ms)
+  Γ£ö should propagate SIGTERM and stop gracefully (50.2122ms)
+Γ£ö ACP Execution Engine (Worker) (166.0178ms)
+Γä╣ tests 11
+Γä╣ suites 2
+Γä╣ pass 10
+Γä╣ fail 1
+Γä╣ cancelled 0
+Γä╣ skipped 0
+Γä╣ todo 0
+Γä╣ duration_ms 9198.7178
+
+Γ£û failing tests:
+
+test at src\index.test.ts:2:6428
+Γ£û should execute allowed CLI commands and stream output (1144.6692ms)
+  AssertionError [ERR_ASSERTION]: Should successfully construct ACP json stream via dummy agent
+      at TestContext.<anonymous> (C:\Users\Fate_Conqueror\OneDrive\Documents\GitHub\Auto_Developer\apps\proxy\src\index.test.ts:210:16)
+      at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async Suite.processPendingSubtests (node:internal/test_runner/test:788:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

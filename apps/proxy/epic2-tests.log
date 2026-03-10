@@ -1,0 +1,15 @@
+Γ£ö createSshServer should return an ssh2 Server instance (44.5798ms)
+{"level":"info","message":"Starting Cloudflare Quick Tunnel for localhost:3000","timestamp":"2026-03-09T07:14:41.693Z"}
+{"event":"tunnel_ready","level":"info","message":"Cloudflare Tunnel successfully established","target":"http://localhost:3000","timestamp":"2026-03-09T07:14:41.695Z","url":"https://magic-tunnel.trycloudflare.com"}
+{"level":"info","message":"Starting Cloudflare Quick Tunnel for localhost:3000","timestamp":"2026-03-09T07:14:41.696Z"}
+{"event":"tunnel_missing_binary","level":"error","message":"Failed to start cloudflared. Ensure the cloudflared CLI is installed globally and in your PATH.","timestamp":"2026-03-09T07:14:41.696Z"}
+Γ£ö startTunnel should handle cloudflared startup and URLs (3.8324ms)
+Γ£ö startTunnel should handle ENOENT gracefully (0.4421ms)
+Γä╣ tests 3
+Γä╣ suites 0
+Γä╣ pass 3
+Γä╣ fail 0
+Γä╣ cancelled 0
+Γä╣ skipped 0
+Γä╣ todo 0
+Γä╣ duration_ms 519.5205
