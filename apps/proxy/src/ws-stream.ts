@@ -41,11 +41,10 @@ export class WebSocketTransport extends Transport {
 }
 
 /**
- * Creates and attaches a WebSocket server to the given HTTP server.
- * Returns the WebSocketTransport that should be added to Winston.
+ * Creates and returns a WebSocket server and the transport that should be added to Winston.
  */
-export function createLogStream(server: HttpServer): WebSocketTransport {
-    const wss = new WebSocketServer({ server, path: '/ws/logs' });
+export function createLogStream(): { transport: WebSocketTransport, wss: WebSocketServer } {
+    const wss = new WebSocketServer({ noServer: true });
     const transport = new WebSocketTransport();
 
     wss.on('connection', (ws: WebSocket) => {
@@ -64,5 +63,5 @@ export function createLogStream(server: HttpServer): WebSocketTransport {
         });
     });
 
-    return transport;
+    return { transport, wss };
 }

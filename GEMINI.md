@@ -32,9 +32,10 @@ gemini -p "Prompt goes here"
 ## 3. AGENTIC RULES & BEHAVIOR
 
 ### Workflow Protocol
-1. **Parallel Execution:** Do not mix frontend (`apps/dashboard`) and backend (`apps/proxy`) development in the same thread. Launch separate agent threads (`@frontend-specialist` vs `@backend-specialist`) to maximize parallel throughput and maintain clean context windows.
+1. **Parallel Execution:** Do not mix frontend (`apps/dashboard`) and backend (`apps/proxy`) development in the same thread. Launch separate agent threads (e.g., `/dev`, `/architect`) to maximize parallel throughput and maintain clean context windows. See `AGENTS.md` for a complete list of specialized BMad agents available.
 2. **SDLC Adherence:** The project tracks state in `_bmad-output/implementation-artifacts/sprint-status.yaml`. Always consult this file to understand the current Epic and Story progress before modifying code.
 3. **Artifact Generation:** After significant architectural changes, use the `/plan` or `task_boundary` tools to draft or update the corresponding markdown guides in the `.gemini/antigravity/brain` directory.
+4. **Antigravity Skills:** The `.agent/skills/` directory contains dormant instructions and project conventions loaded on-demand via Progressive Disclosure. These rules are automatically injected into your context; ensure you always follow them during execution.
 
 ### Code Standards (Strict)
 - **Validation:** Always use `zod` for payload validation on any new proxy endpoints.

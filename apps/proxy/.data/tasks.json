@@ -1,0 +1,159 @@
+[
+  {
+    "id": "f6d24841-0722-41e5-a908-94f6d52a0b21",
+    "command": "gemini",
+    "rawInput": "Write a short two-line poem about space.",
+    "mode": "fast",
+    "status": "done",
+    "steps": [
+      {
+        "id": "1fd9a114-552e-42f9-9b81-4d1cf2415779",
+        "order": 1,
+        "description": "Execute: Write a short two-line poem about space.",
+        "status": "done",
+        "startedAt": "2026-03-11T03:59:37.098Z",
+        "completedAt": "2026-03-11T04:00:13.975Z"
+      }
+    ],
+    "complexity": 5,
+    "analysis": "Complexity Score: 5/10\nMode: FAST\n\nAnalysis:",
+    "createdAt": "2026-03-11T03:59:36.575Z",
+    "updatedAt": "2026-03-11T04:00:13.975Z",
+    "completedAt": "2026-03-11T04:00:13.975Z"
+  },
+  {
+    "id": "afa6b160-1572-448c-bd2d-6b7274220229",
+    "command": "gemini",
+    "rawInput": "Run node -v",
+    "mode": "fast",
+    "status": "done",
+    "steps": [
+      {
+        "id": "77f5ea4c-3dc2-4a95-8ca3-49744ff18a8b",
+        "order": 1,
+        "description": "Execute: Run node -v",
+        "status": "done",
+        "startedAt": "2026-03-11T04:24:58.888Z",
+        "completedAt": "2026-03-11T04:28:25.838Z"
+      }
+    ],
+    "complexity": 3,
+    "analysis": "Complexity Score: 3/10\nMode: FAST\n\nAnalysis:\n  • Simple keyword detected: \"run\"",
+    "createdAt": "2026-03-11T04:24:58.349Z",
+    "updatedAt": "2026-03-11T04:28:25.870Z",
+    "completedAt": "2026-03-11T04:28:25.870Z"
+  },
+  {
+    "id": "6546d6ab-f41f-4db0-a366-7658ea18d55c",
+    "command": "gemini",
+    "rawInput": "Construct a python program for the illustrating the Mandelbrot Set and Fibonacci numbers",
+    "mode": "fast",
+    "status": "done",
+    "steps": [
+      {
+        "id": "246b5ef4-085f-4169-b859-5a9089c88080",
+        "order": 1,
+        "description": "Execute: Construct a python program for the illustrating the Mandelbrot Set and Fibonacci numbers",
+        "status": "done",
+        "startedAt": "2026-03-11T04:30:15.580Z",
+        "completedAt": "2026-03-11T04:31:01.914Z"
+      }
+    ],
+    "complexity": 5,
+    "analysis": "Complexity Score: 5/10\nMode: FAST\n\nAnalysis:",
+    "createdAt": "2026-03-11T04:30:15.048Z",
+    "updatedAt": "2026-03-11T04:31:01.914Z",
+    "completedAt": "2026-03-11T04:31:01.914Z"
+  },
+  {
+    "id": "1d4f65ab-1e9f-4f6e-a86d-5556ab06717f",
+    "command": "gemini",
+    "rawInput": "Construct a python program for the illustrating the Mandelbrot Set and Fibonacci numbers and store it as python file in Downloads in home directory. Please provide me the link to that.",
+    "mode": "planned",
+    "status": "failed",
+    "steps": [
+      {
+        "id": "513f8f7f-fb53-46f1-a9b4-9850e7e65e43",
+        "order": 1,
+        "description": "Analyze requirements and scope",
+        "status": "running",
+        "startedAt": "2026-03-11T04:32:46.161Z"
+      },
+      {
+        "id": "8151d08b-1388-4298-8698-c4ae260ce598",
+        "order": 2,
+        "description": "Identify target files and dependencies",
+        "status": "pending"
+      },
+      {
+        "id": "2ff1f9c0-0dab-48d5-9575-9e93a846e3fa",
+        "order": 3,
+        "description": "Plan implementation for: Construct a python program for the illustrating the Mandelbrot Set and Fibonacci",
+        "status": "pending"
+      },
+      {
+        "id": "b913f5e5-5db4-4fed-98ab-d675a3fa3251",
+        "order": 4,
+        "description": "Execute implementation changes",
+        "status": "pending"
+      },
+      {
+        "id": "9cfc292d-a2d5-4df9-9bc3-0c033aec8ee1",
+        "order": 5,
+        "description": "Validate and verify changes",
+        "status": "pending"
+      }
+    ],
+    "complexity": 8,
+    "analysis": "Complexity Score: 8/10\nMode: PLANNED\n\nAnalysis:\n  • Long prompt (31 words) suggests complexity",
+    "createdAt": "2026-03-11T04:32:45.639Z",
+    "updatedAt": "2026-03-11T04:33:00.712Z",
+    "error": "Process exited with code -1073741510"
+  },
+  {
+    "id": "25d5770d-fec9-4fd8-a071-b1719d7159c1",
+    "command": "gemini",
+    "rawInput": "Construct a python program for the illustrating the Mandelbrot Set and Fibonacci numbers and store in the main directory as python file.",
+    "mode": "planned",
+    "status": "running",
+    "steps": [
+      {
+        "id": "ccff4291-74b2-43bf-94fb-0ae678dfeef9",
+        "order": 1,
+        "description": "Analyze requirements and scope",
+        "status": "running",
+        "startedAt": "2026-03-11T04:33:35.792Z"
+      },
+      {
+        "id": "e92a00c5-15c9-4749-bf82-87b45b6fc627",
+        "order": 2,
+        "description": "Identify target files and dependencies",
+        "status": "running",
+        "startedAt": "2026-03-11T04:35:31.752Z"
+      },
+      {
+        "id": "352867e8-f23b-4786-9479-67cb8e00232f",
+        "order": 3,
+        "description": "Plan implementation for: Construct a python program for the illustrating the Mandelbrot Set and Fibonacci",
+        "status": "pending"
+      },
+      {
+        "id": "48df9433-feb5-4999-83ab-25cabc53e5de",
+        "order": 4,
+        "description": "Execute implementation changes",
+        "status": "pending"
+      },
+      {
+        "id": "e402283b-206e-41fe-8cb1-1a54ee60c621",
+        "order": 5,
+        "description": "Validate and verify changes",
+        "status": "done",
+        "completedAt": "2026-03-11T04:35:31.751Z"
+      }
+    ],
+    "complexity": 6,
+    "analysis": "Complexity Score: 6/10\nMode: PLANNED\n\nAnalysis:\n  • Medium prompt (22 words)",
+    "createdAt": "2026-03-11T04:33:35.233Z",
+    "updatedAt": "2026-03-11T04:35:31.752Z"
+  }
+]

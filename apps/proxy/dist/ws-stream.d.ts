@@ -1,5 +1,4 @@
-import { Server as HttpServer } from 'http';
-import { WebSocket } from 'ws';
+import { WebSocketServer, WebSocket } from 'ws';
 import Transport from 'winston-transport';
 /**
  * Custom Winston transport that broadcasts log entries to all connected WebSocket clients.
@@ -11,8 +10,10 @@ export declare class WebSocketTransport extends Transport {
     get clientCount(): number;
 }
 /**
- * Creates and attaches a WebSocket server to the given HTTP server.
- * Returns the WebSocketTransport that should be added to Winston.
+ * Creates and returns a WebSocket server and the transport that should be added to Winston.
  */
-export declare function createLogStream(server: HttpServer): WebSocketTransport;
+export declare function createLogStream(): {
+    transport: WebSocketTransport;
+    wss: WebSocketServer;
+};
 //# sourceMappingURL=ws-stream.d.ts.map

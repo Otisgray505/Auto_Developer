@@ -1,5 +1,7 @@
 # Auto_Developer: Start-Up & Usage Guide
 
+For the full operational guide (URLs, networking modes, API surface, troubleshooting), see: `docs/COMPLETE-USAGE-GUIDE.md`.
+
 ## Prerequisites
 - **Node.js**: v18+ (required for Next.js 16 and Express)
 - **PowerShell**: Required for the centralized start script

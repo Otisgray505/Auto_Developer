@@ -51,9 +51,17 @@ development_status:
   2-2-custom-ssh-server-backend: review
   epic-2-retrospective: optional
 
-  epic-3: backlog
+  epic-3: done
   3-1-dashboard-scaffolding-quick-capture: done
   3-2-fleet-management-interface: done
   3-3-real-time-session-streaming: done
   3-4-productivity-analytics: done
   epic-3-retrospective: optional
+
+  epic-4-orchestrator-intelligence: done
+  4-1-orchestrator-api-task-manager: done
+  4-2-fleet-registry-ws-fleet-stream: done
+  4-3-dynamic-stats-api: done
+  4-4-dashboard-live-api-integration: done
+  4-5-task-monitor-dashboard-tab: done
+  epic-4-retrospective: optional

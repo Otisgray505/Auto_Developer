@@ -40,11 +40,10 @@ class WebSocketTransport extends winston_transport_1.default {
 }
 exports.WebSocketTransport = WebSocketTransport;
 /**
- * Creates and attaches a WebSocket server to the given HTTP server.
- * Returns the WebSocketTransport that should be added to Winston.
+ * Creates and returns a WebSocket server and the transport that should be added to Winston.
  */
-function createLogStream(server) {
-    const wss = new ws_1.WebSocketServer({ server, path: '/ws/logs' });
+function createLogStream() {
+    const wss = new ws_1.WebSocketServer({ noServer: true });
     const transport = new WebSocketTransport();
     wss.on('connection', (ws) => {
         logger_1.logger.info('Dashboard WebSocket client connected', { event: 'ws_connect' });
@@ -59,6 +58,6 @@ function createLogStream(server) {
             logger_1.logger.error(`WebSocket client error: ${err.message}`, { event: 'ws_error' });
         });
     });
-    return transport;
+    return { transport, wss };
 }
 //# sourceMappingURL=ws-stream.js.map
