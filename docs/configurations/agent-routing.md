@@ -65,3 +65,16 @@ claude
 
 ## 5. Verification
 Once configured and executed, check the AutoOrch Dashboard at `http://localhost:3000`. You should see the agent appear in the **Active Fleet** matrix and its intercepted tool calls stream in the **Interceptions** tab.
+
+## Viewing Delegated Task Sessions
+
+Delegated tasks are hosted by the proxy and exposed over a shared terminal WebSocket. That means you can observe the same task from multiple surfaces:
+
+- **Dashboard terminal surface**: attach through the dashboard task terminal UI when available in your dashboard checkout.
+- **Current Antigravity shell**: attach inline without opening a new OS terminal:
+
+```powershell
+.\attach-task.ps1 <taskId>
+```
+
+This attach flow reuses the existing delegated session. It does not spawn a second worker.

@@ -121,3 +121,15 @@ npm run start:antigravity  # Replace with your actual start command
 - **Agent hangs or errors out:** Ensure the proxy (Terminal 1) is actually running and hasn't crashed.
 - **Nothing appears on the dashboard:** Ensure your browser is connected to the WebSocket. Check the "Live Session Stream" header for the green "Connected" badge.
 - **Commands go straight to the internet (bypassing dashboard):** You likely closed the terminal where you set the environment variable. Environment variables are **session-specific**. If you open a new terminal tab, you must run the `$env:GEMINI_API_BASE_URL=...` command again.
+
+## Inline Attach for Antigravity
+
+When the proxy delegates a task, the worker runs as a backend-managed session. It is not opened automatically as a new visible terminal window.
+
+To inspect or control that worker from your current Antigravity or PowerShell session, attach to the task:
+
+```powershell
+.\attach-task.ps1 <taskId>
+```
+
+This connects your current terminal to the same delegated session the dashboard can observe.
